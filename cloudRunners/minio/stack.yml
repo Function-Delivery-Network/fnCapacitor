@@ -1,0 +1,11 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+
+functions:
+  miniodb:
+    lang: python3
+    handler: ./miniodb
+    image: ctmuthu93/miniodb
+    build_options:
+    - dev

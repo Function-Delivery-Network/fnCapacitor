@@ -1,0 +1,5 @@
+*/.terraform/
+*/terraform*
+terraform/config.json
+output*
+*.ipynb_checkpoints

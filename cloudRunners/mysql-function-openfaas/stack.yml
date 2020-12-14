@@ -1,0 +1,16 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+
+functions:
+  mydb:
+    lang: python3
+    handler: ./mydb
+    image: ctmuthu93/mydb
+    environment_file:
+      - env.yml
+    secrets: 
+    - secret-mysql-key
+    build_options:
+    - dev
+    - mysql

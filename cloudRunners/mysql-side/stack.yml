@@ -1,0 +1,16 @@
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:31112
+
+functions:
+  mysqlside:
+    lang: python3
+    handler: ./mysqlside
+    image: ctmuthu93/mysqlside
+    environment_file:
+      - env.yml
+    secrets:
+    - secret-mysql-key
+    build_options:
+    - dev
+    - mysql
